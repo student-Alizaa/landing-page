@@ -31,6 +31,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -40,6 +41,8 @@ nav a {
   padding: 0.75rem 1rem;
   display: inline-block;
   min-height: 48px;
+  line-height: normal;
+  text-align: center;
   transition: color 0.3s ease;
 }
 
@@ -75,9 +78,13 @@ nav a.active {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  display: inline-block;
-  min-height: 48px;
   font-size: 1rem;
+  min-height: 48px;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
   transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s ease;
 }
@@ -172,6 +179,12 @@ footer a:hover {
 @media (max-width: 480px) {
   .btn {
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav a {
+    width: 100%;
+    display: block;
     box-sizing: border-box;
   }
 }
